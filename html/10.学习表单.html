@@ -15,17 +15,122 @@ method: post, get提交方式
     post : 比较安全,传输大文件.
 -->
 
-<form action="1.我的第一个网页.html" method="post">
+<form action="1.我的第一个网页.html" method="get">
 
-<!--    文本输入框 ：<input type="text">-->
-    <p>名字： <input type="text" name="username"></p>
+    <!--    文本输入框 ：<input type="text">
+            value="狂神好 默认初始值
+            maxlength="8" 最长能写几个字符
+            size="30"  文本柜的长度
+    -->
+    <p>名字： <input type="text" name="username" placeholder="请输入用户名" required></p>
 
-<!--    密码框 <input type="password" name="pwd">-->
-    <p>密码： <input type="password" name="pwd"></p>
+    <!--    密码框 <input type="password" name="pwd">-->
+    <p>密码： <input type="password" name="pwd" hidden value="123456" required></p>
 
+    <!--    单选框标签
+        input type="radio"
+        value:单选框的值2
+        name:表示组
+       -->
+    <p>性别:
+        <input type="radio" value="boy" name="sex" checked disabled>男
+        <input type="radio" value="girl" name="sex">女
+    </p>
+
+    <!--    多选框
+    <input type="checkbox">
+
+    -->
+    <p>爱好:
+        <input type="checkbox" value="sleep" name="hobby">睡觉
+        <input type="checkbox" value="code" name="hobby" checked>敲代码
+        <input type="checkbox" value="chat" name="hobby">聊天
+        <input type="checkbox" value="game" name="hobby">游戏
+    </p>
+
+    <!--    按钮
+    input type="button" 普通按钮
+    input type="image"  图像按钮
+    input type="submit" 提交按钮
+    input type="reset"  重置按钮
+    -->
+    <p>按钮:
+        <input type="button" name="btn1" value="点击变长">
+        <input type="image" src="../resourse/image/1.gif">
+    </p>
+
+    <!--    下拉框,列表框
+    -->
+    <p>国家:
+        <select name="列表名称">
+            <option value="china">中国</option>
+            <option value="us">美国</option>
+            <option value="sw" selected>瑞士</option>
+            <option value="yd">印度</option>
+        </select>
+
+    </p>
+
+    <!--    文本域
+                cols="50" rows="10"
+    -->
+    <p>反馈:
+        <textarea name="textarea" cols="50" rows="10">文本内容</textarea>
+    </p>
+
+
+    <!--    文件域
+            input type="file" name="files"
+    -->
     <p>
-    <input type="submit">
-    <input type="reset">
+        <input type="file" name="files">
+        <input type="button" value="上传" name="upload">
+    </p>
+
+    <!--邮件验证-->
+    <p>邮箱:
+        <input type="email" name="email">
+    </p>
+
+
+    <!--URL-->
+    <p>URL:
+        <input type="url" name="url">
+    </p>
+
+
+    <!--数字-->
+    <p>数字:
+        <input type="number" name="num" max="100" min="0" step="10">
+    </p>
+
+    <!--滑块
+    input type="range"
+    -->
+    <p>滑块:
+        <input type="range" min="0" max="100">
+    </p>
+
+    <!--    搜索框-->
+    <p>搜索:
+        <input type="search" name="search">
+    </p>
+
+    <!--    增强鼠标可用性-->
+    <p>
+        <label for="mark">你点我试试</label>
+        <input type="text" id="mark">
+    </p>
+
+
+<!--    (正则表达式自己百度)https://www.jb51.net/article/76901.htm-->
+    <p>自定义邮箱:
+        <input type="text" name="diymail" pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$">
+    </p>
+    
+    <p>
+        <input type="submit" disabled>
+        <input type="reset">
     </p>
 </form>
 
